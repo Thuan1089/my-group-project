@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://code.jquery.com">
+    <title>MILO TEA - Đăng Nhập & Đăng Ký</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS Chính -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Header va Thanh dieu huong -->
+    <div id="site-header"></div>
+
+    <!-- Noi dung chinh -->
+    <main class="noi-dung-chinh">
+        <div class="hop-chua">
+            
+            <!-- Nút chuyển tab Đăng Nhập / Đăng Ký -->
+            <div class="cac-tab">
+                <button type="button" class="tab-btn active" id="btn-tab-dang-nhap">Đăng Nhập</button>
+                <button type="button" class="tab-btn" id="btn-tab-dang-ky">Đăng Ký</button>
+            </div>
+
+            <!-- FORM 1: ĐĂNG NHẬP -->
+            <form id="form-dang-nhap" class="khung-form">
+                <div class="hang-nhap">
+                    <label for="dn-tai-khoan">Tài khoản / Số điện thoại / Email</label>
+                    <input type="text" id="dn-tai-khoan" placeholder="Nhập tài khoản, SĐT hoặc Email" required autocomplete="username">
+                </div>
+
+                <div class="hang-nhap">
+                    <label for="dn-mat-khau">Mật khẩu</label>
+                    <input type="password" id="dn-mat-khau" placeholder="Nhập mật khẩu" required autocomplete="current-password">
+                </div>
+
+                <button type="submit" class="nut-bam">Đăng Nhập</button>
+            </form>
+
+            <!-- FORM 2: ĐĂNG KÝ -->
+            <form id="form-dang-ky" class="khung-form an-form">
+                <div class="hang-nhap">
+                    <label for="dk-ho-ten">Họ và tên</label>
+                    <input type="text" id="dk-ho-ten" placeholder="Nhập họ và tên" required>
+                </div>
+
+                <div class="hang-nhap">
+                    <label for="dk-tai-khoan">Số điện thoại / Email</label>
+                    <input type="text" id="dk-tai-khoan" placeholder="Nhập SĐT hoặc Email" required>
+                </div>
+
+                <div class="hang-nhap">
+                    <label for="dk-mat-khau">Mật khẩu</label>
+                    <input type="password" id="dk-mat-khau" placeholder="Tạo mật khẩu" required autocomplete="new-password">
+                </div>
+
+                <button type="submit" class="nut-bam">Đăng Ký Tài Khoản</button>
+            </form>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="site-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../js/tien-ich/dinh-dang.js"></script>
+    <script src="../js/dich-vu/luu-tru.js"></script>
+    <script src="../js/chinh.js"></script>
+    <script src="../js/pages/dang-nhap-dang-ky.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://code.jquery.com">
+    <title>Tra Cứu Đơn Hàng - MILO TEA</title>
+
+    <!-- Link Font Awesome Icon từ CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Nhúng các file CSS đúng chuẩn sơ đồ thư mục -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pages/theo-doi.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+    <!-- Header và Thanh điều hướng đồng bộ chuẩn toàn hệ thống -->
+    <div id="site-header"></div>
+
+    <main class="tracking-page vung-chua">
+
+        <!-- Tiêu đề trang -->
+        <section class="tracking-intro">
+            <h1>Theo Dõi Đơn Hàng Realtime</h1>
+            <p>
+                Nhập số điện thoại đặt hàng để xem tiến trình chuẩn bị đồ uống từ MILO TEA
+            </p>
+        </section>
+
+        <!-- Khung tra cứu -->
+        <section class="tracking-container">
+            <form class="tracking-form" id="trackingForm" onsubmit="xuLyTraCuu(event)">
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Số điện thoại đặt hàng (VD: 0383496587)"
+                    required
+                >
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i> Tra Cứu Đơn
+                </button>
+            </form>
+        </section>
+
+        <!-- Nơi hiển thị thông báo kết quả tra cứu -->
+        <div id="trackingResult" class="tracking-message"></div>
+
+        <!-- Khung kết quả tra cứu chi tiết -->
+        <section id="orderResult" class="order-result" hidden>
+
+            <!-- Thông tin chung của đơn hàng -->
+            <div class="order-header">
+                <div>
+                    <p class="label-ma-don">Mã đơn hàng:</p>
+                    <h2 id="resultOrderCode">MILO123456</h2>
+                    <p id="resultOrderDate" class="ngay-dat-don"></p>
+                </div>
+                <span id="resultStatus" class="order-status">Đang chuẩn bị hàng</span>
+            </div>
+            <!-- Tiến trình đơn hàng -->
+            <div class="order-progress">
+                <h3><i class="fa-solid fa-clock-rotate-left"></i> Tiến Trình Đơn Hàng Realtime:</h3>
+                <div class="progress-steps" id="progressSteps">
+                    <div class="progress-step active" id="step1"><i class="fa-solid fa-receipt"></i> 1. Xác Nhận</div>
+                    <div class="progress-step" id="step2"><i class="fa-solid fa-blender"></i> 2. Pha Chế</div>
+                    <div class="progress-step" id="step3"><i class="fa-solid fa-truck-fast"></i> 3. Đang Giao</div>
+                    <div class="progress-step" id="step4"><i class="fa-solid fa-circle-check"></i> 4. Hoàn Thành</div>
+                </div>
+            </div>
+
+            <!-- Thông tin giao hàng và danh sách món -->
+            <div class="order-details">
+
+                <div class="delivery-info">
+                    <h3><i class="fa-solid fa-user"></i> Thông Tin Giao Hàng:</h3>
+                    <p><strong>Người nhận:</strong> <span id="resultName"></span></p>
+                    <p><strong>Số điện thoại:</strong> <span id="resultPhone"></span></p>
+                    <p><strong>Địa chỉ:</strong> <span id="resultAddress"></span></p>
+                    <p><strong>Thanh toán:</strong> <span id="resultPayment"></span></p>
+                    <p><strong>Ghi chú:</strong> <span id="resultNote">Không có</span></p>
+                </div>
+
+                <div class="ordered-items">
+                    <h3><i class="fa-solid fa-mug-hot"></i> Danh Sách Món:</h3>
+                    <div id="resultItems" class="danh-sach-mon-tra-cuu"></div>
+                    <div class="order-total">
+                        <span>Tổng Tiền Đơn Hàng:</span>
+                        <strong id="resultTotal">0 đ</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <!-- Footer 4 Cột chuẩn hóa -->
+    <div id="site-footer"></div>
+
+    <!-- Thứ tự nhúng các Script khởi tạo hệ thống -->
+    <script src="../js/tien-ich/dinh-dang.js"></script>
+    <script src="../js/dich-vu/luu-tru.js"></script>
+    <script src="../js/dich-vu/trang-thai-don.js"></script>
+    <script src="../js/chinh.js"></script>
+    <script src="../js/pages/theo-doi-don-hang.js"></script>
+    <script src="../js/pages/dang-nhap-dang-ky.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../components/components.js"></script>
+</body>
+
+</html>

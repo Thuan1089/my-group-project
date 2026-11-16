@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://code.jquery.com">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pages/lien-he.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <div id="site-header"></div>
+    <!-- Noi dung trang chu -->
+    <main class="lien-he">
+
+        <!-- CỘT THÔNG TIN LIÊN HỆ -->
+        <section class="lien-he__thong-tin">
+
+            <p class="lien-he__thuong-hieu">MILO TEA VIỆT NAM</p>
+
+            <h1 class="lien-he__tieu-de">
+                Kết Nối Với Chúng Tôi
+            </h1>
+
+            <p class="lien-he__mo-ta">
+                Bạn có thắc mắc, góp ý hoặc nhu cầu đặt số lượng lớn cho sự kiện?
+                Hãy liên hệ ngay với MILO TEA qua các kênh bên dưới.
+            </p>
+
+            <div class="lien-he__danh-sach">
+
+                <!-- Địa chỉ -->
+                <div class="lien-he__muc">
+                    <div class="lien-he__icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div class="lien-he__noi-dung">
+                        <p>Địa chỉ cửa hàng</p>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=123+Duong+Tra+Sua+Thanh+Xuan+Ha+Noi"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            123 Sơn Trà, Đà Nẵng
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hotline -->
+                <div class="lien-he__muc">
+                    <div class="lien-he__icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div class="lien-he__noi-dung">
+                        <p>Hotline đặt hàng</p>
+
+                        <a href="tel:19006868">1900 6868</a>
+                        <span> - </span>
+                        <a href="tel:0988123456">0988 123 456</a>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="lien-he__muc">
+                    <div class="lien-he__icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div class="lien-he__noi-dung">
+                        <p>Email hỗ trợ</p>
+
+                        <a href="mailto:hotro@milotea.vn">
+                            hotro@milotea.vn
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Giờ mở cửa -->
+            <div class="lien-he__gio-mo-cua">
+                Giờ mở cửa: 08:00 - 22:30
+                (Tất cả các ngày trong tuần)
+            </div>
+
+        </section>
+
+        <!-- CỘT FORM LIÊN HỆ -->
+        <section class="lien-he__form-container">
+
+            <h2 class="lien-he__form-tieu-de">
+                Gửi Tin Nhắn 
+            </h2>
+
+            <form id="form-lien-he">
+
+                <!-- Họ tên -->
+                <div class="lien-he__truong">
+                    <label for="ho-ten">Họ và tên *</label>
+
+                    <input
+                        type="text"
+                        id="ho-ten"
+                        name="hoTen"
+                        placeholder="Nguyễn Văn A"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <!-- Số điện thoại -->
+                <div class="lien-he__truong">
+                    <label for="so-dien-thoai">Số điện thoại *</label>
+
+                    <input
+                        type="tel"
+                        id="so-dien-thoai"
+                        name="soDienThoai"
+                        placeholder="0912345678"
+                        autocomplete="tel"
+                        pattern="[0-9+\s().-]{9,15}"
+                        title="Vui lòng nhập số điện thoại hợp lệ"
+                        required
+                    >
+                </div>
+
+                <!-- Nội dung -->
+                <div class="lien-he__truong">
+                    <label for="noi-dung">Nội dung liên hệ *</label>
+
+                    <textarea
+                        id="noi-dung"
+                        name="noiDung"
+                        placeholder="Nhập nội dung bạn muốn góp ý..."
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- Nút gửi -->
+                <button type="submit" class="lien-he__nut-gui">
+                    Gửi Liên Hệ 
+                </button>
+
+                <!-- Thông báo kết quả -->
+                <p id="thong-bao-ket-qua"
+                   class="lien-he__ket-qua"
+                   role="status"
+                   aria-live="polite"></p>
+
+            </form>
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <div id="site-footer"></div>
+    <script src="../js/tien-ich/dinh-dang.js"></script>
+    <script src="../js/dich-vu/luu-tru.js"></script>
+    <script src="../js/chinh.js"></script>
+    <script src="../js/pages/lien-he.js"></script>
+    <script src="../js/pages/dang-nhap-dang-ky.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../components/components.js"></script>
+</body>
+</html>

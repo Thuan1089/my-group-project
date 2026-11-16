@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://code.jquery.com">
+    <title>Giỏ Hàng - MILO TEA</title>
+
+    <!-- Link Font Awesome Icon từ CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Nhúng CSS dùng chung và CSS riêng trang Giỏ hàng -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pages/gio-hang.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+    <!-- Header và Thanh điều hướng đồng bộ chuẩn toàn hệ thống -->
+    <div id="site-header"></div>
+
+    <!-- Nội dung chính trang Giỏ hàng -->
+    <main class="vung-chua trang-gio-hang">
+        <h1 class="tieu-de-trang">Giỏ hàng của bạn</h1>
+
+        <!-- Thẻ chứa dữ liệu bảng giỏ hàng & khung tổng tiền render bằng JS -->
+        <div id="danh-sach-gio-hang"></div>
+        <div id="tong-ket-gio-hang" class="tong-ket-gio-hang"></div>
+    </main>
+
+    <!-- Footer 4 Cột chuẩn hóa -->
+    <div id="site-footer"></div>
+
+    <!-- Thứ tự nhúng các Script khởi tạo hệ thống -->
+    <script src="../js/tien-ich/dinh-dang.js"></script>
+    <script src="../js/dich-vu/luu-tru.js"></script>
+    <script src="../js/chinh.js"></script>
+    <script src="../js/pages/gio-hang.js"></script>
+    <script src="../js/pages/dang-nhap-dang-ky.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../components/components.js"></script>
+</body>
+
+</html>

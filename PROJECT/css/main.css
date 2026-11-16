@@ -1,0 +1,19 @@
+/* css/tong-hop.css - Tệp tổng hợp kết nối toàn bộ hệ thống CSS */
+
+/* 1. Hệ thống CSS dùng chung do Trưởng nhóm quản lý */
+@import url('dat-lai.css');
+@import url('co-so.css');
+@import url('thanh-phan-chung.css');
+@import url('bo-cuc.css');
+
+/* 2. Các trang CSS riêng do 5 thành viên phụ trách */
+@import url('./pages/trang-chu.css');       /* Linh */
+@import url('./pages/san-pham.css');        /* Lê */
+@import url('./pages/chi-tiet.css');        /* Linh */
+@import url('./pages/gio-ha11ng.css');        /* Thuận */
+@import url('./pages/thanh-toan.css');      /* Thuận */
+@import url('./pages/theo-doi.css');        /* Lê */
+@import url('./pages/lien-he.css');         /* Tuyết */
+@import url('./pages/quan-ly-sp.css');      /* Tuyết */
+@import url('./pages/dang-nhap.css');       /* Tâm */
+@import url('./pages/gio-hang.css'); 
